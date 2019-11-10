@@ -5,15 +5,19 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Matrix
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.faceanalyserapp.Modules.ImageConverter
 import com.example.faceanalyserapp.Modules.Permissions
 import io.fotoapparat.Fotoapparat
 import io.fotoapparat.configuration.CameraConfiguration
 import io.fotoapparat.facedetector.FaceDetector
+import io.fotoapparat.log.fileLogger
+import io.fotoapparat.log.logcat
+import io.fotoapparat.log.loggers
+import io.fotoapparat.parameter.ScaleType
 import io.fotoapparat.preview.Frame
-import io.fotoapparat.selector.back
-import io.fotoapparat.selector.front
+import io.fotoapparat.selector.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -39,20 +43,64 @@ class MainActivity : AppCompatActivity() {
             Permissions.requestPermission(this)
         }
 
-        fotoapparatInstance = Fotoapparat
-            .with(applicationContext)
-            .into(fotoapparatCameraView)
-            .frameProcessor {
-                initFaceDetector(it)
-            }
+//        fotoapparatInstance = Fotoapparat
+//            .with(applicationContext)
+//            .into(fotoapparatCameraView)
+//            .frameProcessor {
+//                initFaceDetector(it)
+//            }
 //            .logger(
 //                loggers(
 //                    logcat(),
 //                    fileLogger(applicationContext)
 //                )
 //            )
-            .build()
+//            .build()
 
+        val cameraConfiguration = CameraConfiguration(
+            pictureResolution = highestResolution(), // (optional) we want to have the highest possible photo resolution
+            previewResolution = highestResolution(), // (optional) we want to have the highest possible preview resolution
+            previewFpsRange = highestFps(),          // (optional) we want to have the best frame rate
+            focusMode = firstAvailable(              // (optional) use the first focus mode which is supported by device
+                continuousFocusPicture(),
+                autoFocus(),                       // if continuous focus is not available on device, auto focus will be used
+                fixed()                            // if even auto focus is not available - fixed focus mode will be used
+            ),
+            flashMode = firstAvailable(              // (optional) similar to how it is done for focus mode, this time for flash
+                autoRedEye(),
+                autoFlash(),
+                torch(),
+                off()
+            ),
+            antiBandingMode = firstAvailable(       // (optional) similar to how it is done for focus mode & flash, now for anti banding
+                auto(),
+                hz50(),
+                hz60(),
+                none()
+            ),
+            jpegQuality = manualJpegQuality(90),     // (optional) select a jpeg quality of 90 (out of 0-100) values
+            sensorSensitivity = lowestSensorSensitivity(), // (optional) we want to have the lowest sensor sensitivity (ISO)
+            frameProcessor = { frame -> initFaceDetector(frame) }            // (optional) receives each frame from preview stream
+        )
+
+        fotoapparatInstance = Fotoapparat(
+            context = this,
+            view = fotoapparatCameraView,                   // view which will draw the camera preview
+            scaleType = ScaleType.CenterCrop,    // (optional) we want the preview to fill the view
+            lensPosition = back(),               // (optional) we want back camera
+            cameraConfiguration = cameraConfiguration, // (optional) define an advanced configuration
+            logger = loggers(                    // (optional) we want to log camera events in 2 places at once
+                logcat(),                   // ... in logcat
+                fileLogger(this)            // ... and to file
+            ),
+            cameraErrorCallback = { error ->
+                Log.println(
+                    Log.ERROR,
+                    "Camera Error :",
+                    error.toString()
+                )
+            }   // (optional) log fatal errors
+        )
 
         analyzeFloatActionBtn.setOnClickListener {
 

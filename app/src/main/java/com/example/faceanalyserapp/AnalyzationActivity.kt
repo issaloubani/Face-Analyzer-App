@@ -27,7 +27,7 @@ class AnalyzationActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "Swipe to see other component", Toast.LENGTH_LONG).show()
 
         // analyze image
-        analyzeImage({}, {})
+        analyzeImage({ initPieChart(it) }, {})
 
     }
 
