@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FaceAnalyserApp</string>
+    <string name="shared_pref_key">bitmap_shared_pref</string>
+    <string name="image_bitmap_key">bitmap_key</string>
+</resources>

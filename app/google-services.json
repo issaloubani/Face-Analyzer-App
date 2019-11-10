@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "786463674755",
+    "firebase_url": "https://fir-facedetector-3e257.firebaseio.com",
+    "project_id": "fir-facedetector-3e257",
+    "storage_bucket": "fir-facedetector-3e257.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786463674755:android:623db2da7c21be7e5d66b6",
+        "android_client_info": {
+          "package_name": "com.example.faceanalyserapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786463674755-0629db9cekbpscf3db8tpe1js87a7fl5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.faceanalyserapp",
+            "certificate_hash": "126c67dc9229eda92ba5eebfde90ce0581e9596b"
+          }
+        },
+        {
+          "client_id": "786463674755-lqee59lo4nn26dul9ba1qb7r10h29s3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6aEDdaDqbk2ceXPQoTPURJraBn4QE-gU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786463674755-lqee59lo4nn26dul9ba1qb7r10h29s3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:786463674755:android:0dbd9686ae0e72105d66b6",
+        "android_client_info": {
+          "package_name": "com.example.fotoapparatdemoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "786463674755-a96lr49o6e8proav9kgjbf8ace9brq9s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fotoapparatdemoapp",
+            "certificate_hash": "126c67dc9229eda92ba5eebfde90ce0581e9596b"
+          }
+        },
+        {
+          "client_id": "786463674755-lqee59lo4nn26dul9ba1qb7r10h29s3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6aEDdaDqbk2ceXPQoTPURJraBn4QE-gU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "786463674755-lqee59lo4nn26dul9ba1qb7r10h29s3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
