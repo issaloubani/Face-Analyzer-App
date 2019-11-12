@@ -18,23 +18,21 @@ import com.example.faceanalyserapp.R;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.fotoapparat.facedetector.Rectangle;
-
-public class FaceView extends View {
+public class FaceDrawerView extends View {
     private final List<Rect> rectangles = new ArrayList<>();
     private final Paint strokePaint = new Paint();
 
-    public FaceView(Context context) {
+    public FaceDrawerView(Context context) {
         super(context);
     }
 
-    public FaceView(Context context, @Nullable AttributeSet attrs) {
+    public FaceDrawerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         applyAttributes(context, attrs);
     }
 
-    public FaceView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public FaceDrawerView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         applyAttributes(context, attrs);
@@ -61,21 +59,13 @@ public class FaceView extends View {
      *
      * @param rectangles rectangles to draw.
      */
-    public void setRectangles(@NonNull List<Rectangle> rectangles) {
+    public void setRectangles(@NonNull List<Rect> rectangles) {
         ensureMainThread();
 
         this.rectangles.clear();
 
-        for (Rectangle rectangle : rectangles) {
-            final int left = (int) (rectangle.getX() * getWidth());
-            final int top = (int) (rectangle.getY() * getHeight());
-            final int right = left + (int) (rectangle.getWidth() * getWidth());
-            final int bottom = top + (int) (rectangle.getHeight() * getHeight());
+        this.rectangles.addAll(rectangles);
 
-            this.rectangles.add(
-                    new Rect(left, top, right, bottom)
-            );
-        }
 
         invalidate();
     }
@@ -83,11 +73,6 @@ public class FaceView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        Paint textPaint = new Paint();
-        textPaint.setAntiAlias(true);
-        textPaint.setTextSize(40f);
-        textPaint.setColor(Color.WHITE);
 
         for (Rect rectangle : rectangles) {
             canvas.drawRect(rectangle, strokePaint);

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/rotateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="rotate" />
+
+    <Button
+        android:id="@+id/flashBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flash" />
+
+    <Button
+        android:id="@+id/focusBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Focus" />
+
+    <Button
+        android:id="@+id/gridBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grid" />
+</LinearLayout>
