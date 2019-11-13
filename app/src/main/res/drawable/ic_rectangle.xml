@@ -1,0 +1,39 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="798.947dp"
+    android:height="798.947dp"
+    android:viewportWidth="798.947"
+    android:viewportHeight="798.947">
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M242.537,7.133A7.112,7.112 0,0 0,235.4 0L14.267,0A14.441,14.441 0,0 0,-0 14.267v78.468a7.133,7.133 0,0 0,14.267 0L14.267,14.267L235.4,14.267A7.112,7.112 0,0 0,242.537 7.133Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M7.133,199.737a7.112,7.112 0,0 0,7.133 -7.133L14.266,135.535a7.133,7.133 0,0 0,-14.267 0L-0.001,192.602A7.112,7.112 0,0 0,7.133 199.737Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M-0,263.937a7.133,7.133 0,1 0,14.267 0L14.267,235.403a7.133,7.133 0,0 0,-14.267 0Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M-0,784.68a14.44,14.44 0,0 0,14.267 14.267h35.667a7.133,7.133 0,0 0,0 -14.267L14.267,784.68L14.267,606.343a7.133,7.133 0,0 0,-14.267 0Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M263.937,784.68L107.001,784.68a7.133,7.133 0,0 0,0 14.267L263.937,798.947a7.133,7.133 0,1 0,0 -14.267Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M527.875,791.811a7.113,7.113 0,0 0,7.133 7.133L784.675,798.944a14.44,14.44 0,0 0,14.267 -14.267L798.942,691.944a7.133,7.133 0,0 0,-14.267 0v92.735L535.008,784.679A7.113,7.113 0,0 0,527.875 791.811Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M791.813,584.943A7.113,7.113 0,0 0,784.68 592.076v42.8a7.133,7.133 0,1 0,14.267 0v-42.8A7.113,7.113 0,0 0,791.813 584.943Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M798.947,535.008a7.133,7.133 0,1 0,-14.267 0L784.68,549.275a7.133,7.133 0,1 0,14.267 0Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M798.946,14.267A14.44,14.44 0,0 0,784.68 0h-21.4a7.133,7.133 0,0 0,0 14.267h21.4L784.68,263.938a7.133,7.133 0,1 0,14.267 0Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M734.745,14.267a7.133,7.133 0,0 0,0 -14.267L706.211,0a7.133,7.133 0,1 0,0 14.267Z" />
+    <path
+        android:fillColor="@color/face_rectangle_color"
+        android:pathData="M670.544,7.133A7.112,7.112 0,0 0,663.409 0L563.542,0a7.133,7.133 0,1 0,0 14.267L663.409,14.267A7.112,7.112 0,0 0,670.544 7.133Z" />
+</vector>
