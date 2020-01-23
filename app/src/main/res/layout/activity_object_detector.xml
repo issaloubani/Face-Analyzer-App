@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NatarioActivity">
-
+    tools:context=".ObjectDetectorActivity">
 
     <com.otaliastudios.cameraview.CameraView
 
-
-        android:id="@+id/natarioCameraView"
+        android:id="@+id/objectDetectorCameraView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:cameraAudio="off"
@@ -27,32 +25,11 @@
 
         <!-- Watermark! -->
         <ImageView
-            android:id="@+id/natarioCameraImageView"
+            android:id="@+id/objectDetectorOverlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             app:layout_drawOnPreview="true" />
 
     </com.otaliastudios.cameraview.CameraView>
-
-    <include
-
-        android:id="@+id/include"
-        layout="@layout/buttons_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <include
-        layout="@layout/frame_processors_buttons_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

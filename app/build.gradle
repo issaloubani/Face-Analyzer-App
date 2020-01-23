@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
@@ -26,7 +26,14 @@ android {
         targetCompatibility = 1.8
     }
 }
+android {
 
+    // ...
+
+    aaptOptions {
+        noCompress "tflite"  // Your model's file extension: "tflite", "lite", etc.
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -46,5 +53,10 @@ dependencies {
     implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
     api 'com.otaliastudios:cameraview:2.4.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'com.google.firebase:firebase-ml-vision:24.0.1'
+    implementation 'com.google.firebase:firebase-ml-vision-object-detection-model:19.0.3'
+    implementation 'org.tensorflow:tensorflow-lite:+'
+    implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.1'
+
 }
-apply plugin: 'com.google.gms.google-services'

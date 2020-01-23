@@ -38,5 +38,27 @@
             android:layout_margin="15dp"
             android:text="Natario Photos" />
 
+        <Button
+            android:id="@+id/objDetectorBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Object Detector" />
+
+        <Button
+            android:id="@+id/tensorflowBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Tensorflow Demo" />
+
+        <Button
+            android:id="@+id/picObjectDetectionBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Pic Obejct Demo" />
+
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

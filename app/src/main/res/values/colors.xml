@@ -7,5 +7,5 @@
     <color name="lEyePieChartColor">#FFC400</color>
     <color name="rEyePieChartColor">#FF0000</color>
     <color name="gray">#DDDDDD</color>
-    <color name="face_rectangle_color">#8739FF</color>
+    <color name="face_rectangle_color">#8500FF90</color>
 </resources>

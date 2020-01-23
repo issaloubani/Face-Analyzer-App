@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FacialController"></activity>
+        <activity android:name=".PicObjectDetection"></activity>
+        <activity android:name=".TensorflowActivity" />
+        <activity android:name=".ObjectDetectorActivity" />
+        <activity android:name=".FacialController" />
         <activity android:name=".NatarioActivity" />
         <activity android:name=".PhotoAnalysisActivity" />
         <activity android:name=".MainActivity">

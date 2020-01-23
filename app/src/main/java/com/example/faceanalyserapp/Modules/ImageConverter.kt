@@ -6,7 +6,7 @@ import android.util.Base64
 import java.io.ByteArrayOutputStream
 
 
-class ImageConverter() {
+class ImageConverter {
     companion object {
 
         fun BitMapToString(bitmap: Bitmap): String {

@@ -21,5 +21,17 @@ class MainActivity : AppCompatActivity() {
         natarioBtn.setOnClickListener {
             startActivity(Intent(applicationContext, NatarioActivity::class.java))
         }
+
+        objDetectorBtn.setOnClickListener {
+            startActivity(Intent(applicationContext, ObjectDetectorActivity::class.java))
+        }
+
+        tensorflowBtn.setOnClickListener {
+            startActivity(Intent(applicationContext, TensorflowActivity::class.java))
+        }
+
+        picObjectDetectionBtn.setOnClickListener {
+            startActivity(Intent(applicationContext, PicObjectDetection::class.java))
+        }
     }
 }
