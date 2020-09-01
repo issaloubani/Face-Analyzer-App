@@ -1,6 +1,6 @@
 # Face Analyzer App 
 ### Made with ❤ by @IssaLoubani99
-Real time android face analyzer and detecter with the powered by Firebase as well as Otaliastudios Camera View.
+Real time android face analyzer and detecter powered by Firebase as well as Otalia Studios Camera View.
 ## Demo
 ![Me GIF Demo](/images/me.gif)
 ![thispersondoesnotexist GIF Demo](/images/thispersondoesnotexist.gif)
