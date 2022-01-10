@@ -8,7 +8,7 @@
 
 ## About
 
-Face analyzer app capable of facial recognition and displaying facial features (eyes open percentage, mouth, nose, etc...) powered by firebase ML.
+Face analyzer app capable of facial recognition and displaying facial features (eyes open percentage, mouth, nose, etc...) powered by firebase ML and coded by Kotlin for android.
 
 ## Demo
 
